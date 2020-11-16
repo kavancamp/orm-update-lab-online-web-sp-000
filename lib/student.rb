@@ -16,7 +16,7 @@ class Student
     CREATE TABLE IF NOT EXISTS students (
       id INTEGER PRIMARY KEY,
       name TEXT,
-      grade INTEGER 
+      grade INTEGER
       )
     SQL
 
@@ -59,7 +59,7 @@ class Student
   end
 
   def update
-    
+
     sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.grade, self.id)
 
@@ -67,4 +67,3 @@ class Student
 
 
 end
-
